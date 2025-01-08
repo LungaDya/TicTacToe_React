@@ -15,7 +15,6 @@ function Header() {
         {theme === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
       </span>
       {/* <button onClick={() => toggleTheme()}>Toggle Theme</button> */}
-      <LightModeIcon />
     </HeaderWrapper>
   );
 }

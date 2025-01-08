@@ -12,3 +12,4 @@ export const useModal = () => {
   };
   return { modal, modalContent, handleModal };
 };
+

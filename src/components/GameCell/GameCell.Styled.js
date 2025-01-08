@@ -10,7 +10,7 @@ export const CellStyle = styled.button`
   border-radius: 2.5rem;
   box-shadow: 5px 10px ${(props) => props.theme.colors.cream};
   cursor: pointer;
-  padding: 1rem;
+  padding: 2rem;
 
  .markedItem {
   path {
