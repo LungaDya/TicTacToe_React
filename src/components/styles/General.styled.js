@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-items:center;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: ${(props) => props.columnBased ? "column" : "row"};
   height: 80vh;
   width: 100vw;
   background-color: ${(props) => props.theme.colors.primary};
@@ -13,16 +13,18 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-color: ${(props) => props.primary ? props.theme.color.primary : props.theme.colors.text};
-font-size: 3rem;
-font-family: 'Pacifico', cursive;
-background-color: transparent;
-`
+  color: ${(props) =>
+    props.primary ? props.theme.color.secondary : props.theme.colors.text};
+  font-size: 3rem;
+  font-family: "Pacifico", cursive;
+  background-color: transparent;
+`;
 
 export const Subtitle = styled.h1`
-color: ${(props) => props.primary ? props.theme.color.primary : props.theme.colors.text};
-font-size: 1.5rem;
-font-weight: 200;
-background-color: transparent;
-padding: 10px;
-`
+  color: ${(props) =>
+    props.primary ? props.theme.color.secondary : props.theme.colors.text};
+  font-size: 1.5rem;
+  font-weight: 200;
+  background-color: transparent;
+  padding: 10px;
+`;

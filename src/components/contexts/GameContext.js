@@ -35,12 +35,36 @@ export const GameContextProvider = (props) => {
     });
   };
 
+  const roundComplete = () => {
+    if (game.turn === game.player1.choice) {
+      console.log("PLAYER 1 wins");
+      setGame({
+        ...game,
+        player1: {
+          ...game.player1,
+          score: game.player1.score +1
+        },
+      });
+    } else if (game.turn === game.player2.choice) {
+      console.log("PLAYER 2 wins")
+      setGame({
+        ...game,
+        player2: {
+          ...game.player2,
+          score: game.player2.score +1
+        },
+      });
+    } else {
+      console.log("DRAW");
+    }
+  };
+
   return (
     <GameContext.Provider
       value={{
         game,
         updateBoard,
-        resetBoard
+        resetBoard,
       }}
     >
       {props.children}

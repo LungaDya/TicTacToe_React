@@ -12,12 +12,12 @@ function RoundOveerModal() {
   return (
     <>
       <ModalHeader>
-        <Title primary>Lunga Wins Round</Title>
+        <Title primary>{game.player1.choice === game.turn ? game.player1.name : game.player2.name} Wins Round</Title>
       </ModalHeader>
       <ModalBody>
         <Subtitle primary>Choices will be switched now.</Subtitle>
-        <Subtitle primary>Lunga: 1</Subtitle>
-        <Subtitle primary>Vuyo: 1</Subtitle>
+        <Subtitle primary>{game.player1.name}: {game.player1.score}</Subtitle>
+        <Subtitle primary>{game.player2.name}: {game.player2.score}</Subtitle>
       </ModalBody>
       <ModalFooter>
         <Button
