@@ -10,9 +10,10 @@ export const lightTheme = {
     blue: "0030f3",
     gray: "#828282",
     white: "#FFfFf0",
-    black: "00000099",
-    purple: "8437f9",
-    yellow: "f9c811",
+    black: "#00000099",
+    purple: "#8437f9",
+    yellow: "#f9c811",
+    cream: "#888888",
 
     text: "#202124",
   },

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CellStyle } from "./GameCell.Styled";
 import { GameContext } from "../contexts/GameContext";
 import { ModalContext } from "../contexts/ModalContext";
-import { RoundOverModal } from "../Modal/RoundOverModal/RoundOver.styled";
+import RoundOverModal from "../Modal/RoundOverModal/RoundOver.styled";
 import { checkForWinner } from "../utils/GameUtils";
 import { ReactComponent as IconX } from "../assets/svgs/icon-x.svg";
 import { ReactComponent as XIconOutline } from "../assets/svgs/icon-x-outline.svg";
@@ -15,9 +15,9 @@ function GameCell({ cellItem, index }) {
 
   const cellClickHandler = () => {
     updateBoard(index);
-    const result = checkForWinner(game.board)
+    const result = checkForWinner(game.board);
     if (result) {
-      roundComplete()
+      roundComplete(result);
       handleModal(<RoundOverModal />);
     }
   };
