@@ -8,11 +8,11 @@ export function ModalContextProvider({ children }) {
   const { modal, modalContent, handleModal } = useModal();
 
   return (
-    <div>
+    
       <ModalContext.Provider value={{ modal, modalContent, handleModal }}>
         <ModalTemplate />
         {children}
       </ModalContext.Provider>
-    </div>
-  );
+    
+  ); 
 }
