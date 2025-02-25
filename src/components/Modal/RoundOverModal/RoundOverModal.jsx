@@ -7,7 +7,7 @@ import { ModalContext } from "../../contexts/ModalContext";
 import { SfxContext } from "../../contexts/SfxContext";
 import { useNavigate } from "react-router-dom";
 
-function RoundOveerModal() {
+function RoundOverModal() {
   const { resetBoard, game, restartGame } = useContext(GameContext);
   const { handleModal } = useContext(ModalContext);
   const { hoverSfx, clickSfx, completedSfx } = useContext(SfxContext);
@@ -61,4 +61,4 @@ function RoundOveerModal() {
   );
 }
 
-export default RoundOveerModal;
+export default RoundOverModal;
